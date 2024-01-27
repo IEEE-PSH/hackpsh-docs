@@ -11,7 +11,7 @@ function MyButton() {
 
   return (
     <div>
-      <button onClick={handleClick} className="border-[1px] border-solid border-white mt-3 py-[2px] px-[6px]">
+      <button onClick={handleClick} className="border-[1px] border-solid border-red-400 mt-3 py-[2px] px-[6px]">
         Clicked {count} times!
       </button>
     </div>
