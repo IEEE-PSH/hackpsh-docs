@@ -2,9 +2,26 @@
 
 It is recommended to setup remotely through GitHub Codespaces since all requirements for the project are handled automatically. However, we recommend setting up locally if you experience performance issues.
 
-## GitHub Codespaces
+## Prerequisites
 
-### 1. Create a Codespace
+### 1. Install the _GitHub Codespaces_ Extension
+
+GitHub Codespaces is an instant, cloud-based environment that allows users to run repositories directly with preconfigured settings. This means you do not have to install anything to test this project. Visit the [Codespaces Docs](https://docs.github.com/en/codespaces/getting-started/deep-dive) to learn more.
+
+1. Open VSCode.
+2. Go to the extensions tab.
+3. Find and install the _GitHub Codespaces_ extension.
+
+### 2. Create a Codespace
+
+1. Click on button located bottom-leftmost of VSCode.
+2. Click on Create New Codespace.
+3. Enter the URL: `https://github.com/IEEE-PSH/hackpsh-web.git`.
+4. Select the branch you want to visit.
+
+A single Codespace can be used throughout the whole application. You do **NOT** have to create another Codespace to visit other branches. For more information on branches, visit the [Contributing](learn.hackpsh.org/contributing) page.
+
+### 3. Start the Codespace
 
 <br />
 <br />
@@ -55,8 +72,6 @@ Run the following command to start up the development server:
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the project live.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project live. You can start editing a page such as `page.tsx`. The page will auto-update as you edit and save the file.
 
-You can start editing a page such as `page.tsx`. The page auto-updates as you edit and save the file.
-
-(This project will require environment variables. If you get errors on environment variables, reach out to the Project Lead and paste them in a new file called `.env` in the root directory.)
+(This project will require environment variables. If you get errors regarding environment variables, reach out to the Project Lead and paste them in a new file called `.env` in the root directory.)
