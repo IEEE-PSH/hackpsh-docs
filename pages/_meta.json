@@ -11,5 +11,9 @@
     "type": "page",
     "href": "https://twitter.com/shuding_",
     "newWindow": true
+  },
+  "setup":{
+    "title":"Project Setup"
   }
+  
 }

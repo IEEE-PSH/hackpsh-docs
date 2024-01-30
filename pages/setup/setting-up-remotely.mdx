@@ -1,0 +1,51 @@
+# Setting Up Remotely
+It is recommended to setup remotely through GitHub Codespaces since all requirements for the project are handled automatically.
+
+## Getting Started
+### Prerequisites
+**1. Install NodeJS**
+
+* Visit [NodeJS](https://nodejs.org/en) and install the recommended version for your machine.
+* Ensure it is correctly installed by running this command in the terminal:
+```
+node
+```
+You should get an output similar to _Welcome to Node.js v18.14.0._ but for your version.
+
+**2. Install pnpm**
+* Visit [pnpm](https://pnpm.io/installation) for installation instructions or run this command in the terminal:
+```sh
+# for windows
+iwr https://get.pnpm.io/install.ps1 -useb | iex
+```
+If you are contributing to this project, use pnpm. Yarn and npm will **NOT** be used for consistency reasons.
+
+**3. Install Docker Desktop**
+* Visit [Docker Desktop Installation](https://docs.docker.com/desktop/install/windows-install/) for installation instructions.
+* Docker Desktop is used to run a local development container for _Supabase_, the service we will use for authentication and the database.
+
+### Cloning the Repository
+1. In VS Code, navigate to `View > Command Palette` or `Ctrl + Shift + P` and enter `Clone`.
+2. Enter in the url: `https://github.com/IEEE-PSH/hackathon-web.git`.
+3. Select a folder on your machine to save the repository.
+4. Open the project.
+
+<br/>
+
+## Running the Project
+### Installing Dependencies
+Run the following command to install all dependencies from `pnpm-lock.yaml`:
+```
+pnpm i
+```
+When you visit a branch for the first time, run this command to ensure all dependencies for that branch are installed.
+### Running the Development Server
+Run the following command to start up the development server:
+```
+pnpm dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project live.
+
+You can start editing a page such as `page.tsx`. The page auto-updates as you edit and save the file.
+
+(This project will require environment variables. If you get errors on environment variables, reach out to the Project Lead and paste them in a new file called `.env` in the root directory.)
