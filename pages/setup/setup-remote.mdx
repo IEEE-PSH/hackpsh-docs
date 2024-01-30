@@ -1,0 +1,79 @@
+# Setting Up Remotely
+
+It is recommended to setup remotely through GitHub Codespaces since all requirements for the project are handled automatically. However, we recommend setting up locally if you experience performance issues.
+
+## Prerequisites
+
+### 1. Install the _GitHub Codespaces_ Extension
+
+GitHub Codespaces is an instant, cloud-based environment that allows users to run repositories directly with preconfigured settings. This means you do not have to install anything to test this project. Visit the [Codespaces Docs](https://docs.github.com/en/codespaces/getting-started/deep-dive) to learn more.
+
+1. Open VSCode.
+2. Go to the extensions tab.
+3. Find and install the _GitHub Codespaces_ extension.
+
+### 2. Create a Codespace
+
+1. Click on button located bottom-leftmost of VSCode.
+2. Click on _Create New Codespace_.
+3. Enter the URL: `https://github.com/IEEE-PSH/hackpsh-web.git`.
+4. Select the branch you want to visit.
+5. Select the instance type for your codespace.
+6. Wait for the development containers to finish setting up.
+
+A single codespace can be used throughout the whole application.
+
+You do **NOT** have to create another Codespace to visit other branches. For more information on branches, visit the [Contributing](learn.hackpsh.org/contributing) page.
+
+<br />
+<br />
+
+# Starting Up Remotely
+
+## Quickstart
+
+You can easily startup all necessary processes by running this command:
+
+```
+pnpm run setup
+```
+
+This command will start up Supabase, migrate tables, and run the development server. It can be used everytime you startup the project. However, it is not recommended you run this command if one specific process is stopped.
+
+## Manual Startup (Optional)
+
+It is recommended to understand how to startup the project manually in the case you want to startup a specific process.
+
+### 1. Start Supabase
+
+Run the following command to start up Supabase:
+
+```
+supabase start
+```
+
+You can check the status of Supabase by running the command:
+
+```
+supabase status
+```
+
+### 2. Migrate Tables
+
+You should only migrate tables if you have not yet done so or if you changed a table. Run the following command to migrate scripts for tables used for the database:
+
+```
+pnpm run migrate
+```
+
+### 3. Run the Development Server
+
+Run the following command to start up the development server:
+
+```
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project live. You can start editing a page such as `page.tsx`. The page will auto-update as you edit and save the file.
+
+(This project will require environment variables. If you get errors regarding environment variables, reach out to the Project Lead and paste them in a new file called `.env` in the root directory.)

@@ -1,7 +1,8 @@
 {
   "index": "Introduction",
+  "setup": "Project Setup",
+  "contributing": "Contributing",
   "another": "Another Page",
-  "advanced": "Advanced",
   "about": {
     "title": "About",
     "type": "page"

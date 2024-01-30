@@ -1,0 +1,92 @@
+# Setting Up Locally
+
+It is recommended to setup locally if you are experiencing performance issues with GitHub Codespaces. However, you will be required to install a few things.
+
+## Prerequisites
+
+### 1. Install NodeJS
+
+- Visit [NodeJS](https://nodejs.org/en) and install the recommended version for your machine.
+- Ensure it is correctly installed by running this command in the terminal:
+
+```
+node
+```
+
+You should get an output similar to _Welcome to Node.js v18.14.0._ but for your version.
+
+### 2. Install pnpm
+
+- Visit [pnpm](https://pnpm.io/installation) for installation instructions or run this command in the terminal:
+
+```sh
+# for windows
+iwr https://get.pnpm.io/install.ps1 -useb | iex
+```
+
+If you are contributing to this project, use pnpm. Yarn and npm will **NOT** be used for consistency reasons.
+
+### 3. Install Docker Desktop
+
+- Visit [Docker Desktop Installation](https://docs.docker.com/desktop/install/windows-install/) for installation instructions.
+- Docker Desktop is used to run a local development container for _Supabase_, the service we will use for authentication and the database.
+
+## Cloning the Repository
+
+1. In VS Code, navigate to `View > Command Palette` or `Ctrl + Shift + P` and enter `Clone`.
+2. Enter the url: `https://github.com/IEEE-PSH/hackpsh-web.git`.
+3. Select a folder on your machine to save the repository.
+4. Open the project.
+
+<br />
+<br />
+
+# Starting Up Locally
+
+## Quickstart
+
+You can easily startup all necessary processes by running this command:
+
+```
+pnpm run setup
+```
+
+This command will start up Supabase, migrate tables, and run the development server. It can be used everytime you startup the project. However, it is not recommended you run this command if one specific process is stopped.
+
+## Manual Startup (Optional)
+
+It is recommended to understand how to startup the project manually in the case you want to startup a specific process.
+
+### 1. Start Supabase
+
+Run the following command to start up Supabase:
+
+```
+npx supabase start
+```
+
+You can check the status of Supabase by running the command:
+
+```
+npx supabase status
+```
+
+### 2. Migrate Tables
+
+You should only migrate tables if you have not yet done so or if you changed a table. Run the following command to migrate scripts for tables used for the database:
+
+```
+pnpm run migrate
+```
+
+### 3. Run the Development Server
+
+Run the following command to start up the development server:
+
+```
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project live. You can start editing a page such as `page.tsx`. The page will auto-update as you edit and save the file.
+
+(This project will require environment variables. If you get errors regarding environment variables, reach out to the Project Lead and paste them in a new file called `.env` in the root directory.)
